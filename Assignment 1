@@ -46,4 +46,135 @@ public class Main {
     }
 }
 
-**{}**
+**{Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter two numbers: ");
+        Double num1 = input.nextDouble();
+        Double num2 = input.nextDouble();
+        System.out.println("Enter the operator: ");
+        char operator = input.next().charAt(0);
+        if(operator == '+'){
+            System.out.println("The sum of the two numbers is: " + (num1 + num2));
+        }
+        else if(operator == '-'){
+            System.out.println("The difference of the two numbers is: " + (num1 - num2));
+        }
+        else if(operator == '*'){
+            System.out.println("The product of the two numbers is: " + (num1 * num2));
+        }
+        else if(operator == '/'){
+            System.out.println("The division of the two numbers is: " + (num1 / num2));
+        }
+        else if(operator == '%'){
+            System.out .println("The remainder of the two numbers is: " + (num1 % num2));
+        else{
+            System.out.println("Invalid operator");
+        }
+    }
+}
+
+**{take two numbers and print the largest one}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter two numbers: ");
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        if(num1 > num2){
+            System.out.println(num1 + " is the largest number.");
+        }
+        else{
+            System.out.println(num2 + " is the largest number.");
+        }
+    }
+}
+
+**{take input & convert indian ruppees into dollars}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the amount in INR: ");
+        double inr = input.nextDouble();
+        double usd = inr / 80 ;
+        System.out.println("The amount in USD is: " + usd);
+    }
+}
+
+**{To calculate Fibonacci Series up to n numbers.}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of terms: ");
+        int n = input.nextInt();
+        int a = 0;
+        int b = 1;
+        System.out.print("The Fibonacci Series is: ");
+        for(int i = 0; i < n; i++){
+            System.out.println(a + " ");
+            int num = a+b;
+            a=b;
+            b=num;
+        }
+    }
+}
+
+**{To find out whether the given String is Palindrome or not.}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the string: ");
+        String str = input.nextLine();
+        String rev = "";
+        for(int i = str.length()-1; i >= 0; i--){
+            rev = rev + str.charAt(i);
+        }
+        if(str.equals(rev)){
+            System.out.println("The string is a palindrome.");
+        }
+        else{
+            System.out.println("The string is not a palindrome.");
+        }
+    }
+}
+
+**{To find Armstrong Number between two given number.}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the range: ");
+        int n1 = input.nextInt();
+        int n2 = input.nextInt();
+        for(int i = n1; i <= n2; i++){
+            int num = i;
+            int sum = 0;
+            while(num > 0){
+                int rem = num % 10;
+                sum = sum + (rem * rem * rem);
+                num = num / 10;
+            }
+            if(sum == i){
+                System.out.println(i + " is an Armstrong number.");
+            }
+        }
+    }
+}
