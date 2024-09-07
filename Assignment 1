@@ -16,6 +16,7 @@ public class Main {
 }
 
 **{ASK NAME AND GREET}**
+
 package com.javalearnings;
 import java.util.Scanner;
 public class Main {
@@ -24,6 +25,24 @@ public class Main {
         System.out.println("Enter your name: ");
         String name = input.nextLine();
         System.out.println("Hello, " + name + " nice to meet you keep growing & keep shining");
+    }
+}
+
+**{CALCULATE S.I.}**
+
+package com.javalearnings;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter principle amount: ");
+        Double amt = input.nextDouble();
+        System.out.println("Enter rate of interest: ");
+        Float rate = input.nextFloat();
+        System.out.println("Enter time in years: ");
+        int t = input.nextInt();
+        Double totalamt = (amt * rate * t) / 100;
+        System.out.println("total amt" + totalamt);
     }
 }
 
